@@ -75,7 +75,7 @@ nav.navbar [aria-expanded='false'] + ul {
 
 /* Basic link styling */
 nav.navbar a {
-  --text-color: var(--color-dark);
+  --text-color: var(--color-light);
   border-block-end: 3px solid var(--border-color, transparent);
   color: var(--text-color);
   padding: 0.1rem;
@@ -118,6 +118,8 @@ nav.navbar svg {
 }
 header svg {
   transform: translateY(-0.1em);
+  height: 6ex;
+  color: var(--spot-color);
 }
 
 nav.navbar [aria-expanded='true'] svg {

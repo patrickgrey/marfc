@@ -5,8 +5,8 @@
   project: https://cube.fyi/css.html
 */
 body {
-  color: var(--color-dark);
-  background: var(--color-light);
+  color: var(--color-light);
+  background: var(--color-dark);
   font-size: var(--size-step-1);
   font-family: var(--font-base);
   line-height: 1.4;
@@ -24,10 +24,20 @@ h3 {
 
 h1 {
   font-size: var(--size-step-5);
+  color: var(--color-dark);
 }
 
 h2 {
   font-size: var(--size-step-4);
+  /* color: var(--color-dark); */
+  /* background-color: var(--color-primary); */
+  width: fit-content;
+  /* padding: 0 var(--space-xs); */
+  /* border-left: solid var(--space-xs) var(--color-primary);
+  padding-left: var(--space-xs); */
+  border-bottom: solid var(--space-xs) var(--color-primary);
+  margin-left: auto;
+  margin-right: auto;
 }
 
 h3 {
@@ -119,4 +129,14 @@ article [href^='http']:not([href*='eleventy-excellent.netlify.app'])::after {
 
 .preload-transitions * {
   transition: none !important;
+}
+
+.link-highlight {
+  color: var(--color-dark);
+  background-color: var(--color-primary);
+  padding: var(--space-xs);
+}
+
+p:has(.link-highlight) {
+  margin-top: var(--space-xl);
 }

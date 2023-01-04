@@ -2,42 +2,89 @@
 layout: base
 ---
 
-<header class="section spot-color-primary">
-  <div class="section__inner">
-    <div class="wrapper flow region">
-      <h1 class="text-center">{{ title }}</h1>
-    </div>
+<header class="section spot-color-primary mr-hero">
+  <div class="section__inner ">
+    {# <div class="wrapper"> #}
+    {# {% imagePlaceholder "./src/assets/images/chino-rocha-SDmXMe4bf-0-unsplash.jpg", "Alt... The preview image for social media" %} #}
+    <img src="assets/images/chino-rocha-SDmXMe4bf-0-unsplash.jpg" alt="Rugby players">
+    <h1 class="text-center wrapper">{{ title }}</h1>
+    <p class="wrapper ">
+      <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus eaque ut corrupti, voluptas quos sunt libero.</spa>
+    </p>
+    {# </div> #}
   </div>
-  {% include 'svg/divider-waves.svg' %}
+  {# {% include 'svg/divider-waves.svg' %}  #}
 </header>
-
-<article class="region">
-  <div class="wrapper flow prose">
-    {{ content | safe }}
-  </div>
-</article>
 
 <article class="region" style="--region-space-top: var(--space-s)">
   <div class="wrapper flow prose">
-    <h2>{{ blog.title }}</h2>
-    <!-- blog intro text is optional. -->
-    {% if blog.intro %}
-    <p>{{ blog.intro }}</p>
-    {% endif %}
+    <h2>News</h2>
+    <!--<p>Our latest updates.</p>
+     blog intro text is optional. -->
+    {# {% if blog.intro %}
+      <p>{{ blog.intro }}</p>
+    {% endif %} #}
   </div>
   <!-- TODO: duplicate of partials/blog.njk -->
 
   <ul class="wrapper grid mt-l-xl" role="list" data-rows="masonry" data-layout="50-50">
-    {% set postslist = collections.posts %} {% for post in postslist.slice(0, 4) %}
+    {% set postslist = collections.posts %}
+    {% for post in postslist.slice(0, 4) %}
 
-    <li class="card flow clickable-card overflow-hidden">
-      <h3>
-        <a href="{{ post.url | url }}">{{ post.data.title }}</a>
-      </h3>
-      {% set definedDate = post.date %} {% include "partials/date.njk" %}
-      <p>{{ post.data.description }}</p>
-    </li>
+      <li class="card flow clickable-card overflow-hidden">
+        <h3>
+          <a href="{{ post.url | url }}">{{ post.data.title }}</a>
+        </h3>
+        {% set definedDate = post.date %}
+        {% include "partials/date.njk" %}
+        <p>{{ post.data.description }}</p>
+      </li>
 
     {% endfor %}
   </ul>
+  <p class="wrapper text-center ">
+    <a class="link-highlight" href="#">Read all news</a>
+  </p>
+</article>
+
+<article class="region">
+  <div class="wrapper flow prose">
+    <h2>Sponsors</h2>
+    <ul class="wrapper mt-l-xl" role="list">
+      {% set postslist = collections.posts %}
+      {% for post in postslist.slice(0, 4) %}
+
+        <li class="card flow clickable-card overflow-hidden">
+          <h3>
+            <a href="{{ post.url | url }}">{{ post.data.title }}</a>
+          </h3>
+          {% set definedDate = post.date %}
+          {% include "partials/date.njk" %}
+          <p>{{ post.data.description }}</p>
+        </li>
+
+      {% endfor %}
+    </ul>
+  </div>
+</article>
+
+<article class="region">
+  <div class="wrapper flow prose">
+    <h2>Events</h2>
+    <ul class="wrapper mt-l-xl" role="list">
+      {% set postslist = collections.posts %}
+      {% for post in postslist.slice(0, 4) %}
+
+        <li class="card flow clickable-card overflow-hidden">
+          <h3>
+            <a href="{{ post.url | url }}">{{ post.data.title }}</a>
+          </h3>
+          {% set definedDate = post.date %}
+          {% include "partials/date.njk" %}
+          <p>{{ post.data.description }}</p>
+        </li>
+
+      {% endfor %}
+    </ul>
+  </div>
 </article>
