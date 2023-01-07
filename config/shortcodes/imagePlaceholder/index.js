@@ -2,7 +2,7 @@ const Image = require('@11ty/eleventy-img');
 const path = require('path');
 const htmlmin = require('html-minifier-terser');
 
-const imageShortcodePlaceholder = async (src, alt, caption, sizes = '100vw') => {
+const imageShortcodePlaceholder = async (src, alt, lazy, caption, sizes = '100vw') => {
   if (!alt) {
     throw new Error(`Missing \`alt\` on myImage from: ${src}`);
   }
@@ -47,17 +47,16 @@ const imageShortcodePlaceholder = async (src, alt, caption, sizes = '100vw') => 
         width="${lowsrc.width}"
         height="${lowsrc.height}"
         alt="${alt}"
-				loading = 'lazy'
+				loading = '${lazy}'
         decoding="async">
     </picture>
-    ${
-      caption
-        ? `<figcaption class="cluster font-display"><p>${caption}</p>
+    ${caption
+      ? `<figcaption class="cluster font-display"><p>${caption}</p>
 	</figcaption>`
-        : ``
+      : ``
     }
 </figure>`,
-    {collapseWhitespace: true}
+    { collapseWhitespace: true }
   );
 };
 
