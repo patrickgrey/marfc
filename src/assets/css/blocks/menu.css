@@ -116,10 +116,11 @@ nav.navbar svg {
   height: 100%;
   width: auto;
 }
+
 header svg {
   transform: translateY(-0.1em);
   height: 6ex;
-  color: var(--spot-color);
+  color: var(--color-primary);
 }
 
 nav.navbar [aria-expanded='true'] svg {

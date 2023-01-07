@@ -2,24 +2,24 @@ module.exports = {
   top: [
     {
       text: 'News',
-      url: '/about/'
+      url: '#'
     },
     {
       text: 'Events',
-      url: '/blog/'
+      url: '#'
     },
     {
       text: 'Teams',
-      url: '/blog/'
+      url: '#'
     },
 
     {
       text: 'Gallery',
-      url: '/blog/'
+      url: '#'
     },
     {
       text: 'Documents',
-      url: '/blog/'
+      url: '#mrDocuments'
     }
   ],
   bottom: [

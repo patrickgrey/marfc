@@ -9,16 +9,16 @@ layout: base
     <img src="assets/images/chino-rocha-SDmXMe4bf-0-unsplash.jpg" alt="Rugby players">
     <h1 class="text-center wrapper">{{ title }}</h1>
     <p class="wrapper ">
-      <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus eaque ut corrupti, voluptas quos sunt libero.</spa>
+      <span>A community run club for all ages. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam  cupiditate magnam amet.</spa>
     </p>
     {# </div> #}
   </div>
   {# {% include 'svg/divider-waves.svg' %}  #}
 </header>
 
-<article class="region" style="--region-space-top: var(--space-s)">
+<article class="region mr-news" style="--region-space-top: var(--space-s)">
   <div class="wrapper flow prose">
-    <h2>News</h2>
+    <h2>Latest News</h2>
     <!--<p>Our latest updates.</p>
      blog intro text is optional. -->
     {# {% if blog.intro %}
@@ -47,44 +47,194 @@ layout: base
   </p>
 </article>
 
+<article class="region mr-highlight-bg ">
+  {# <div class="wrapper flow prose"> #}
+  <h2>Sponsors</h2>
+  <div class="mr-sponsors">
+    <a href="#"><img src="https://via.placeholder.com/160x80/333333/ffffff?text=Example+sponsor" alt="Sponsor"></a>
+    <a href="#"><img src="https://via.placeholder.com/160x80/333333/ffffff?text=Example+sponsor" alt="Sponsor"></a>
+    <a href="#"><img src="https://via.placeholder.com/160x80/333333/ffffff?text=Example+sponsor" alt="Sponsor"></a>
+    <a href="#"><img src="https://via.placeholder.com/160x80/333333/ffffff?text=Example+sponsor" alt="Sponsor"></a>
+    <a href="#"><img src="https://via.placeholder.com/160x80/333333/ffffff?text=Example+sponsor" alt="Sponsor"></a>
+    <a href="#"><img src="https://via.placeholder.com/160x80/333333/ffffff?text=Example+sponsor" alt="Sponsor"></a>
+    <a href="#"><img src="https://via.placeholder.com/160x80/333333/ffffff?text=Example+sponsor" alt="Sponsor"></a>
+    <a href="#"><img src="https://via.placeholder.com/160x80/333333/ffffff?text=Example+sponsor" alt="Sponsor"></a>
+    <a href="#"><img src="https://via.placeholder.com/160x80/333333/ffffff?text=Example+sponsor" alt="Sponsor"></a>
+    <a href="#"><img src="https://via.placeholder.com/160x80/333333/ffffff?text=Example+sponsor" alt="Sponsor"></a>
+    <a href="#"><img src="https://via.placeholder.com/160x80/333333/ffffff?text=Example+sponsor" alt="Sponsor"></a>
+    <a href="#"><img src="https://via.placeholder.com/160x80/333333/ffffff?text=Example+sponsor" alt="Sponsor"></a>
+    <a href="#"><img src="https://via.placeholder.com/160x80/333333/ffffff?text=Example+sponsor" alt="Sponsor"></a>
+    <a href="#"><img src="https://via.placeholder.com/160x80/333333/ffffff?text=Example+sponsor" alt="Sponsor"></a>
+  </div>
+  {# </div> #}
+</article>
+
 <article class="region">
   <div class="wrapper flow prose">
-    <h2>Sponsors</h2>
-    <ul class="wrapper mt-l-xl" role="list">
-      {% set postslist = collections.posts %}
-      {% for post in postslist.slice(0, 4) %}
-
-        <li class="card flow clickable-card overflow-hidden">
-          <h3>
-            <a href="{{ post.url | url }}">{{ post.data.title }}</a>
-          </h3>
-          {% set definedDate = post.date %}
-          {% include "partials/date.njk" %}
-          <p>{{ post.data.description }}</p>
-        </li>
-
-      {% endfor %}
+    <h2>Latest Events</h2>
+    <ul class="wrapper mt-l-xl mr-events" role="list">
+      <li class="flow">
+        <h3>
+          <a href="#">Event 1 title</a>
+        </h3>
+        <time class="size-step-0" datetime="2023-02-14 20:00">14th Feb 2023</time>
+        <p>Event details Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ducimus fugit quidem, quae nemo labore voluptas sed veritatis perspiciatis nostrum fugiat? Magni cumque accusantium, fuga ipsum nam officia culpa numquam a!</p>
+      </li>
+      <li class="flow">
+        <h3>
+          <a href="#">Event 2 title</a>
+        </h3>
+        <time class="size-step-0" datetime="2023-02-14 20:00">14th Feb 2023</time>
+        <p>Event details Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ducimus fugit quidem, quae nemo labore voluptas sed veritatis perspiciatis nostrum fugiat? Magni cumque accusantium, fuga ipsum nam officia culpa numquam a!</p>
+      </li>
+      <li class="flow">
+        <h3>
+          <a href="#">Event 3 title</a>
+        </h3>
+        <time class="size-step-0" datetime="2023-02-14 20:00">14th Feb 2023</time>
+        <p>Event details Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ducimus fugit quidem, quae nemo labore voluptas sed veritatis perspiciatis nostrum fugiat? Magni cumque accusantium, fuga ipsum nam officia culpa numquam a!</p>
+      </li>
     </ul>
+    <p class="wrapper text-center ">
+      <a class="link-highlight" href="#">See all events</a>
+    </p>
   </div>
 </article>
 
 <article class="region">
   <div class="wrapper flow prose">
-    <h2>Events</h2>
-    <ul class="wrapper mt-l-xl" role="list">
-      {% set postslist = collections.posts %}
-      {% for post in postslist.slice(0, 4) %}
+    <h2>Teams</h2>
+  </div>
+  <ul class="wrapper grid mt-l-xl mr-teams" role="list" data-rows="masonry" data-layout="50-50">
+    <li class="flow">
+      {# <h3>
+          <a href="#">Mens senior</a>
+        </h3> #}
+      <details>
+        <summary>
+          <h3>Mens senior</h3>
+        </summary>
+        <ul>
+          <li>1. Player McPlayer</li>
+          <li>2. Player McPlayer</li>
+          <li>3. Player McPlayer</li>
+          <li>4. Player McPlayer</li>
+          <li>5. Player McPlayer</li>
+          <li>6. Player McPlayer</li>
+          <li>7. Player McPlayer</li>
+          <li>8. Player McPlayer</li>
+          <li>9. Player McPlayer</li>
+          <li>10. Player McPlayer</li>
+        </ul>
+      </details>
+    </li>
 
-        <li class="card flow clickable-card overflow-hidden">
-          <h3>
-            <a href="{{ post.url | url }}">{{ post.data.title }}</a>
-          </h3>
-          {% set definedDate = post.date %}
-          {% include "partials/date.njk" %}
-          <p>{{ post.data.description }}</p>
-        </li>
+    <li class="flow">
+      <details>
+        <summary>
+          <h3>Womens senior</h3>
+        </summary>
+        <ul>
+          <li>1. Player McPlayer</li>
+          <li>2. Player McPlayer</li>
+          <li>3. Player McPlayer</li>
+          <li>4. Player McPlayer</li>
+          <li>5. Player McPlayer</li>
+          <li>6. Player McPlayer</li>
+          <li>7. Player McPlayer</li>
+          <li>8. Player McPlayer</li>
+          <li>9. Player McPlayer</li>
+          <li>10. Player McPlayer</li>
+        </ul>
+      </details>
+    </li>
 
-      {% endfor %}
+    <li class="flow">
+      <details>
+        <summary>
+          <h3>Girls</h3>
+        </summary>
+        <ul>
+          <li>1. Player McPlayer</li>
+          <li>2. Player McPlayer</li>
+          <li>3. Player McPlayer</li>
+          <li>4. Player McPlayer</li>
+          <li>5. Player McPlayer</li>
+          <li>6. Player McPlayer</li>
+          <li>7. Player McPlayer</li>
+          <li>8. Player McPlayer</li>
+          <li>9. Player McPlayer</li>
+          <li>10. Player McPlayer</li>
+        </ul>
+      </details>
+    </li>
+
+    <li class="flow">
+      <details>
+        <summary>
+          <h3>Boys</h3>
+        </summary>
+        <ul>
+          <li>1. Player McPlayer</li>
+          <li>2. Player McPlayer</li>
+          <li>3. Player McPlayer</li>
+          <li>4. Player McPlayer</li>
+          <li>5. Player McPlayer</li>
+          <li>6. Player McPlayer</li>
+          <li>7. Player McPlayer</li>
+          <li>8. Player McPlayer</li>
+          <li>9. Player McPlayer</li>
+          <li>10. Player McPlayer</li>
+        </ul>
+      </details>
+    </li>
+
+  </ul>
+  {# <p class="wrapper text-center ">
+      <a class="link-highlight" href="#">See all events</a>
+    </p> #}
+</article>
+
+<article class="region mr-highlight-bg ">
+  <h2>Gallery</h2>
+  <div class="mr-gallery">
+    <ul class="grid mt-l-xl" role="list" data-rows="masonry" data-layout="50-50">
+      <li>
+        <a href="#"><img src="https://picsum.photos/seed/marfc1/600/400" alt="gallery image"></a>
+      </li>
+      <li>
+        <a href="#"><img src="https://picsum.photos/seed/marfc2/600/400" alt="gallery image"></a>
+      </li>
+      <li>
+        <a href="#"><img src="https://picsum.photos/seed/marfc3/600/400" alt="gallery image"></a>
+      </li>
+      <li>
+        <a href="#"><img src="https://picsum.photos/seed/marfc4/600/400" alt="gallery image"></a>
+      </li>
+      <li>
+        <a href="#"><img src="https://picsum.photos/seed/marfc5/600/400" alt="gallery image"></a>
+      </li>
+      <li>
+        <a href="#"><img src="https://picsum.photos/seed/marfc6/600/400" alt="gallery image"></a>
+      </li>
+      <li>
+        <a href="#"><img src="https://picsum.photos/seed/marfc7/600/400" alt="gallery image"></a>
+      </li>
+      <li>
+        <a href="#"><img src="https://picsum.photos/seed/marfc8/600/400" alt="gallery image"></a>
+      </li>
+      <li>
+        <a href="#"><img src="https://picsum.photos/seed/marfc9/600/400" alt="gallery image"></a>
+      </li>
+      <li>
+        <a href="#"><img src="https://picsum.photos/seed/marfc10/600/400" alt="gallery image"></a>
+      </li>
+      <li>
+        <a href="#"><img src="https://picsum.photos/seed/marfc11/600/400" alt="gallery image"></a>
+      </li>
+      <li>
+        <a href="#"><img src="https://picsum.photos/seed/marfc12/600/400" alt="gallery image"></a>
+      </li>
     </ul>
   </div>
 </article>

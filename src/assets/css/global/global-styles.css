@@ -121,6 +121,10 @@ article [href^='http']:not([href*='eleventy-excellent.netlify.app'])::after {
   text-indent: 1em; /* the width of the icon */
 }
 
+time {
+  font-size: var(--size-step-0);
+}
+
 /* Base selection styles that invert whatever colours are rendered */
 ::selection {
   background: var(--color-dark);
@@ -138,5 +142,84 @@ article [href^='http']:not([href*='eleventy-excellent.netlify.app'])::after {
 }
 
 p:has(.link-highlight) {
+  margin-top: var(--space-xl);
+}
+
+.mr-highlight-bg {
+  color: var(--color-dark);
+  background-color: var(--color-primary);
+}
+
+.mr-news time {
+  color: var(--color-primary);
+}
+
+.mr-sponsors {
+  padding: var(--space-m);
+  display: flex;
+  gap: var(--space-s);
+  align-content: center;
+  justify-content: space-around;
+  flex-flow: row wrap;
+}
+
+.mr-sponsors > a {
+  width: fit-content;
+}
+
+.mr-events h3 {
+  border-left: var(--space-xs) solid var(--color-primary);
+  padding-left: var(--space-xs);
+  margin-top: var(--space-2xl);
+}
+
+.mr-events time {
+  color: var(--color-primary);
+  margin-left: calc(var(--space-xs) * 2);
+}
+
+.mr-gallery img,
+.mr-gallery li {
+  display: block;
+  margin: 0 auto;
+}
+
+.mr-teams summary {
+  background-color: var(--color-primary);
+  color: var(--color-dark);
+  cursor: pointer;
+  font-size: var(--size-step-3);
+  padding-left: var(--space-xs);
+}
+
+.mr-teams summary:focus:not(.focus-visible) {
+  outline: none;
+}
+
+.mr-teams summary > h3 {
+  display: inline-block;
+}
+
+.mr-teams details > ul {
+  margin-top: var(--space-m);
+  list-style: none;
+}
+
+.mr-teams details > ul > li {
+  margin-bottom: var(--space-xs);
+  background-image: url('../images/icons/icon-shirt.svg');
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: 2rem;
+  padding-left: 3rem;
+}
+
+.mr-address {
+  font-style: normal;
+
+  margin-top: var(--space-xl);
+}
+
+.mr-copy {
   margin-top: var(--space-xl);
 }

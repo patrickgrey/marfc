@@ -2,6 +2,15 @@
   padding: var(--space-s-m);
   background: var(--color-dark);
   color: var(--color-light);
+  min-height: 100vh;
+}
+
+@media (min-width: 1024px) {
+  .site-foot {
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 .site-foot__inner {
@@ -15,4 +24,8 @@
 .site-foot svg {
   height: 1em;
   width: 1em;
+}
+
+.site-foot > div {
+  margin-bottom: var(--space-xl);
 }
