@@ -36,7 +36,7 @@ layout: base
         </h3>
         {% set definedDate = newsItem.date_gmt %}
         {% include "partials/date.njk" %}
-        <p>{{ newsItem.content.rendered | safe | excerpt  }}</p>
+        <p>{{ newsItem.content.rendered | excerpt  }}</p>
 
       </li>
     {% endfor %}
