@@ -1,6 +1,6 @@
 ---
 permalink: /index.html
-title: 'Mid-Argyll Rugby'
+title: 'Mid Argyll Rugby'
 description: 'Key principles using modern CSS, fluid type, fluid space, flexible layout and progressive enhancement will help you to build better front-ends that work for everyone.'
 layout: 'home'
 blog:
