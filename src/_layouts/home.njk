@@ -28,34 +28,16 @@ layout: base
   </div>
   <!-- TODO: duplicate of partials/blog.njk -->
 
-  <ul class="wrapper grid mt-l-xl" role="list" data-rows="masonry" data-layout="50-50">
-    {% for newsItem in news %}
-      <li class="card flow clickable-card overflow-hidden">
-        <h3>
-          <a href="#">{{ newsItem.title.rendered | safe }}</a>
-        </h3>
-        {% set definedDate = newsItem.date_gmt %}
-        {% include "partials/date.njk" %}
-        <p>{{ newsItem.content.rendered | excerpt  }}</p>
+  {# {% include "partials/news-list.njk" %} #}
 
-      </li>
-    {% endfor %}
+  {% set countLimit = 4 %}
+  {% include "partials/news-list.njk" %}
 
-    {# {% set postslist = collections.posts %}
-    {% for post in postslist.slice(0, 4) %}
-
-      <li class="card flow clickable-card overflow-hidden">
-        <h3>
+  {# 
           <a href="{{ post.url | url }}">{{ post.data.title }}</a>
-        </h3>
-
-        <p>{{ post.data.description }}</p>
-      </li>
-
-    {% endfor %} #}
-  </ul>
+ #}
   <p class="wrapper text-center ">
-    <a class="link-highlight" href="#">Read all news</a>
+    <a class="link-highlight" href="/news">Read all news</a>
   </p>
 </article>
 

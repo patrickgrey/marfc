@@ -48,6 +48,7 @@ module.exports = eleventyConfig => {
 
   // --------------------- layout aliases -----------------------
   eleventyConfig.addLayoutAlias('base', 'base.njk');
+  eleventyConfig.addLayoutAlias('news', 'news.njk');
   eleventyConfig.addLayoutAlias('page', 'page.njk');
   eleventyConfig.addLayoutAlias('home', 'home.njk');
   eleventyConfig.addLayoutAlias('blog', 'blog.njk');

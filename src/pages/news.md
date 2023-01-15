@@ -1,6 +1,6 @@
 ---
-title: Blog
+title: News
 description: 'All news posts can be found here'
-layout: blog
-permalink: /blog/index.html
+layout: news
+permalink: /news/index.html
 ---

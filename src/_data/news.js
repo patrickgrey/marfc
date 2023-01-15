@@ -6,11 +6,11 @@ module.exports = async function () {
   // returning promise
 
   let data = await EleventyFetch(url, {
-    duration: "0s", // save for 1 day
+    duration: "1d", // save for 1 day
     type: "json"    // we’ll parse JSON for you
   });
 
-  console.log(data);
+  // console.log(data);
 
   return data;
 };
