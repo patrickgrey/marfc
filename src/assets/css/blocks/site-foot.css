@@ -1,4 +1,5 @@
 .site-foot {
+  border-top: var(--space-xs) solid var(--color-primary);
   padding: var(--space-s-m);
   background: var(--color-dark);
   color: var(--color-light);

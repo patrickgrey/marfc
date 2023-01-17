@@ -2,7 +2,7 @@ module.exports = {
   top: [
     {
       text: 'News',
-      url: '#'
+      url: '/news'
     },
     {
       text: 'Events',

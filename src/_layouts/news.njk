@@ -1,5 +1,6 @@
 ---
 layout: base
+localCSS: news
 ---
 
 <header class="section spot-color-primary mr-hero">
@@ -9,8 +10,7 @@ layout: base
   </div>
 </header>
 
-<article class="wrapper region " style="--region-space-top: var(--space-s)">
-
+<article class="wrapper region mr-news" style="--region-space-top: var(--space-s)">
+  {% set headerLevel = "h2" %}
   {% include "partials/news-list.njk" %}
-
 </article>
