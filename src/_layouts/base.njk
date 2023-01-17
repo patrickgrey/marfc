@@ -62,7 +62,7 @@ localCSS:
             {% if preloads.crossorigin %}crossorigin{% endif %}/>
     {% endif %}
 
-    {% if localCSS != "" %}
+    {% if localCSS %}
       <link rel="stylesheet" href="/assets/page-css/{{ localCSS }}.css?{{ assetHash }}"/>
     {% endif %}
 
