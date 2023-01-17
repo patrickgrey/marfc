@@ -10,7 +10,7 @@ module.exports = async function () {
     type: "json"    // we’ll parse JSON for you
   });
 
-  console.log(data);
+  // console.log(data);
 
   return data;
 };
