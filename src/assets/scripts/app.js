@@ -31,7 +31,7 @@ button.addEventListener('click', e => {
 // avoid DRY: disabling menu
 const disableMenu = () => {
   button.setAttribute('aria-expanded', false);
-  button.focus();
+  // button.focus();
 };
 
 //  close on escape
@@ -48,5 +48,11 @@ document.addEventListener('click', e => {
     disableMenu();
   }
 });
+
+nav.querySelectorAll("ul > li > a").forEach(link => {
+  link.addEventListener("click", function(event){
+    disableMenu();
+  })
+})
 
 nav.insertBefore(burgerClone, list);
